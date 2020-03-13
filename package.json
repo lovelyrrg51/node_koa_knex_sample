@@ -1,0 +1,25 @@
+{
+  "name": "node-koa-api-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node .\\src\\server\\index.js",
+    "test": "./node_modules/mocha/bin/_mocha"
+  },
+  "keywords": [],
+  "author": "Maxim Rogozha",
+  "devDependencies": {
+    "chai": "4.1.1",
+    "chai-http": "^4.3.0",
+    "mocha": "3.5.0"
+  },
+  "dependencies": {
+    "knex": "^0.20.11",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^8.0.8",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2"
+  }
+}
