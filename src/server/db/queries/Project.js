@@ -2,10 +2,12 @@ const knex = require('../connection');
 
 async function get_average_score(Tasks) {
   total = 0; count = 0;
-  count = Tasks.length;
-  for(i = 0; i < count; i ++)
-    total += Tasks[i].score;
-  total /= count;
+  for(i = 0; i < Tasks.length; i ++)
+    if (Tasks[i].status === 3){
+      total += Tasks[i].score;
+      count ++;
+    }
+  total = count !== 0 ? total / count : 0;
 
   return total;
 }
